@@ -1,3 +1,17 @@
+@import '~@/assets/scss/common';
+@import '~@/components/header/header';
+@import '~@/components/breadcrumbs/breadcrumbs';
+@import '~@/components/product-head/product-head';
+@import '~@/components/section-header/section-header';
+@import '~@/components/eff-section/eff-section';
+@import '~@/components/press-section/press-section';
+@import '~@/components/trial-section/trial-section';
+@import '~@/components/partners-section/partners-section';
+@import '~@/components/related-products/related-products';
+@import '~@/components/product-reviews/product-reviews';
+@import '~@/components/docs-product/docs-product';
+@import '~@/components/footer/footer';
+
 .product-page {
   &__logo-brand {
     margin-left: 20px;

@@ -3,16 +3,16 @@ mixin related-products
     .related-products__header
       p.related-products__title Сопутствующие товары
       .related-products__header-btn-group
-        button.related-products__btn-prev(type='button')
+        button.related-products__btn-prev(type='button' data-btn-prev)
           include ../../components/related-products/img/icons/arrow.svg
-        button.related-products__btn-next(type='button')
+        button.related-products__btn-next(type='button', data-btn-next)
           include ../../components/related-products/img/icons/arrow.svg
     .related-products__list-wrap
-      ul.related-products__container-list
+      ul.related-products__container-list(data-container)
         li.related-products__container-list-item
           ul.related-products__list
             each item in [1, 2, 3, 4, 5]
-              li.related-products__list-item
+              li.related-products__list-item(data-items)
                 .related-products__card
                   img.related-products__img(src=require('../../components/related-products/img/image.png'), alt='Изображение товара')
                   .related-products__content
@@ -24,7 +24,7 @@ mixin related-products
         li.related-products__container-list-item
           ul.related-products__list
             each item in [1, 2, 3, 4, 5]
-              li.related-products__list-item
+              li.related-products__list-item(data-items)
                 .related-products__card
                   img.related-products__img(src=require('../../components/related-products/img/image.png'), alt='Изображение товара')
                   .related-products__content

@@ -1,19 +1,20 @@
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { getDirectoriesBasenames } = require('./build/utils.js')
-const isDev = process.env.NODE_ENV === 'development'
+
+const isDev = process.env.NODE_ENV.trim() === 'development'
 const pages = getDirectoriesBasenames(path.resolve('./src/pages'))
 
 const instances = pages.map(page => {
   return new HtmlWebpackPlugin({
     template: `./pages/${page}/${page}.pug`,
-    filename: `${page}.html`
+    filename: `${page}.html`,
+    chunks: ['common', page]
   })
 })
 
@@ -28,8 +29,14 @@ const config = {
   entry: entries,
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].js',
-    path: path.join(__dirname, 'dist')
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    extensions: ['.js', '.scss', '.pug'],
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   optimization: {
     minimizer: [
@@ -44,8 +51,7 @@ const config = {
     ],
     splitChunks: {
       chunks: 'all',
-      name: 'common',
-      minChunks: 2
+      name: 'common'
     }
   },
   devServer: {
@@ -59,7 +65,12 @@ const config = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -68,16 +79,7 @@ const config = {
               plugins: [require('autoprefixer')()]
             }
           },
-          'sass-loader',
-          {
-            loader: 'sass-resources-loader',
-            options: {
-              resources: [
-                path.resolve(__dirname, './src/assets/scss/vars.scss'),
-                path.resolve(__dirname, './src/assets/scss/mixins.scss')
-              ]
-            }
-          }
+          'sass-loader'
         ]
       },
       {
@@ -150,9 +152,15 @@ const config = {
   },
   plugins: [
     ...instances,
-    new MiniCssExtractPlugin('[name].css'),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static'
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/common.css'
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ].filter(Boolean)
 }

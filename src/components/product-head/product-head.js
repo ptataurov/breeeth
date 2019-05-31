@@ -1,11 +1,8 @@
-import './product-head.scss'
-
-const $ = window.$
+const $ = require('jquery')
 
 const $fixedTarget = $('.product-head__scroll-wrap', '.product-head')
 const $imageBlock = $('.product-head__product-img-block', '.product-head')
 const offsetTarget = $fixedTarget.offset().top
-
 const marginTop = $fixedTarget.height()
 
 const fixedProductNav = function() {

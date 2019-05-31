@@ -3,16 +3,16 @@ mixin product-reviews
     .product-reviews__header
       p.product-reviews__title Отзывы
       .product-reviews__btn-group
-        button.product-reviews__btn-prev(type='button')
+        button.product-reviews__btn-prev(type='button' data-btn-prev)
           include ../../components/product-reviews/img/icons/arrow.svg
-        button.product-reviews__btn-next(type='button')
+        button.product-reviews__btn-next(type='button' data-btn-next)
           include ../../components/product-reviews/img/icons/arrow.svg
     .product-reviews__card-list-wrap
-      ul.product-reviews__container-list
+      ul.product-reviews__container-list(data-container)
         li.product-reviews__container-list-item
           ul.product-reviews__card-list
             each item in [1, 2, 3]
-              li.product-reviews__card-list-item
+              li.product-reviews__card-list-item(data-items)
                 ul.product-reviews__rating-list
                   each start in [1, 2, 3, 4, 5]
                     li.product-reviews__rating-list-item
@@ -27,7 +27,7 @@ mixin product-reviews
         li.product-reviews__container-list-item
           ul.product-reviews__card-list
             each item in [1, 2, 3]
-              li.product-reviews__card-list-item
+              li.product-reviews__card-list-item(data-items)
                 ul.product-reviews__rating-list
                   each start in [1, 2, 3, 4, 5]
                     li.product-reviews__rating-list-item

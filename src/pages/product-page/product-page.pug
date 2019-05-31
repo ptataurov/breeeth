@@ -2,11 +2,20 @@ extends ../layout
 
 include ../../components/header/header
 include ../../components/breadcrumbs/breadcrumbs
+include ../../components/product-head/product-head
+
 include ../../components/section-header/section-header
+include ../../components/eff-section/eff-section
+include ../../components/press-section/press-section
+include ../../components/trial-section/trial-section
 include ../../components/partners-section/partners-section
 include ../../components/related-products/related-products
 include ../../components/product-reviews/product-reviews
 include ../../components/docs-product/docs-product
+include ../../components/footer/footer
+
+
+
 
 block content
   - 
@@ -135,16 +144,12 @@ block content
       +breadcrumbs
       img.product-page__logo-brand(src=require('./img/brand-logo.png') alt='Логотип бренда')
 
-    include ../../components/product-head/product-head
     +product-head(productNavLinks)
 
-    include ../../components/eff-section/eff-section
     +eff-section
 
-    include ../../components/press-section/press-section
     +press-section
 
-    include ../../components/trial-section/trial-section
     +trial-section
 
     section.product-page__promo1
@@ -249,5 +254,4 @@ block content
 
     +docs-product
     
-  include ../../components/footer/footer
   +footer(footerLinks)

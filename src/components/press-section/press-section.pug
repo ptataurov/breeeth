@@ -1,47 +1,49 @@
-- 
-  var reviews = [
-    {
-      title: 'BORK A804 против IQAir. Обзор и тест очистителей воздуха',
-      src: require('../../components/press-section/img/review-1.png'),
-      href: '#'
-    },
-    {
-      title: 'Как сделать воздух чище с IQAir HealthPro 250',
-      src: require('../../components/press-section/img/review-2.png'),
-      href: '#'
-    },
-    {
-      title: 'Обзор и сравнение шести очистителей воздуха',
-      src: require('../../components/press-section/img/review-3.png'),
-      href: '#'
-    }
-  ]
-
--
-  var platforms = [
-    {
-      title: 'Обзор на YouTube',
-      src: require('../../components/press-section/img/logos/logo-1.svg'),
-      href: '#'
-    },
-    {
-      title: 'Обзор на HI-TECH@MAIL.RU',
-      src: require('../../components/press-section/img/logos/logo-2.svg'),
-      href: '#'
-    },
-    {
-      title: 'Обзор в журнале «Потребитель»',
-      src: require('../../components/press-section/img/logos/logo-3.png'),
-      href: '#'
-    },
-    {
-      title: 'Обзор программы «Чудо техники»',
-      src: require('../../components/press-section/img/logos/logo-4.png'),
-      href: '#'
-    }
-  ]
 
 mixin press-section
+
+  - 
+    var reviews = [
+      {
+        title: 'BORK A804 против IQAir. Обзор и тест очистителей воздуха',
+        src: require('../../components/press-section/img/review-1.png'),
+        href: '#'
+      },
+      {
+        title: 'Как сделать воздух чище с IQAir HealthPro 250',
+        src: require('../../components/press-section/img/review-2.png'),
+        href: '#'
+      },
+      {
+        title: 'Обзор и сравнение шести очистителей воздуха',
+        src: require('../../components/press-section/img/review-3.png'),
+        href: '#'
+      }
+    ]
+
+  -
+    var platforms = [
+      {
+        title: 'Обзор на YouTube',
+        src: require('../../components/press-section/img/logos/logo-1.svg'),
+        href: '#'
+      },
+      {
+        title: 'Обзор на HI-TECH@MAIL.RU',
+        src: require('../../components/press-section/img/logos/logo-2.svg'),
+        href: '#'
+      },
+      {
+        title: 'Обзор в журнале «Потребитель»',
+        src: require('../../components/press-section/img/logos/logo-3.png'),
+        href: '#'
+      },
+      {
+        title: 'Обзор программы «Чудо техники»',
+        src: require('../../components/press-section/img/logos/logo-4.png'),
+        href: '#'
+      }
+    ]
+
   section#press-section.press-section
     .container.max-width-960px
       .row.press-section__banner-block

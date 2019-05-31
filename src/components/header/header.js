@@ -1,6 +1,4 @@
-import './header.scss'
-
-const $ = window.$
+const $ = require('jquery')
 
 $(function() {
   const $headerNav = $('.header__nav', '.header')

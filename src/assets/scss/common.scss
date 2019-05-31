@@ -4,6 +4,8 @@
 @import '~bootstrap/scss/utilities/_spacing.scss';
 
 @import '~normalize.css/normalize.css';
+@import './vars';
+@import './mixins';
 @import './fonts';
 
 html {
