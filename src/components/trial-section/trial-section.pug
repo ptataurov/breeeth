@@ -1,0 +1,21 @@
+mixin trial-section
+  section#trial-section.trial-section
+    -
+      var headerData = {
+        title: 'HyperHEPA',
+        desc: `Модели IQAir с фильтрами HyperHEPA задерживают все виды вирусов, бактерий, аллергенов и плесневых грибов. Почему? 
+        Среди перечисленных загрязнителей воздуха<br>самые маленькие - вирусы. Самый маленький вирус имеет размер от 20 нанометров. 
+        Эффективность очистки воздуха IQAir с HyperHEPA для частиц размером от 3 нанометров 
+        - более 99,5%, а для частиц от 300 нанометров (0,3 микрона) - более 99,97%.`
+      }
+
+    include ../section-header/section-header
+    +section-header(headerData)
+
+    .container.max-width-960px
+      .row
+        .col.trial-section__chart
+          include ./img/chart.svg
+    
+    include ../video-block/video-block
+    +video-block({ poster: 'https://www.breeethretail.ru/iqair_250/img/section-6-img.jpg', src: 'https://www.breeethretail.ru/iqair_250/img/video2.mp4'})

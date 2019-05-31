@@ -1,0 +1,23 @@
+@include importFont(100) {
+  src: url('../../assets/fonts/ttf/Exo2-Thin.ttf') format('truetype');
+}
+
+@include importFont(300) {
+  src: url('../../assets/fonts/ttf/Exo2-Light.ttf') format('truetype');
+}
+
+@include importFont(400) {
+  src: url('../../assets/fonts/ttf/Exo2-Regular.ttf') format('truetype');
+}
+
+@include importFont(500) {
+  src: url('../../assets/fonts/ttf/Exo2-Medium.ttf') format('truetype');
+}
+
+@include importFont(600) {
+  src: url('../../assets/fonts/ttf/Exo2-SemiBold.ttf') format('truetype');
+}
+
+@include importFont(700) {
+  src: url('../../assets/fonts/ttf/Exo2-Bold.ttf') format('truetype');
+}

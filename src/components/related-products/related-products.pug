@@ -1,0 +1,36 @@
+mixin related-products
+  section#related-products.related-products
+    .related-products__header
+      p.related-products__title Сопутствующие товары
+      .related-products__header-btn-group
+        button.related-products__btn-prev(type='button')
+          include ../../components/related-products/img/icons/arrow.svg
+        button.related-products__btn-next(type='button')
+          include ../../components/related-products/img/icons/arrow.svg
+    .related-products__list-wrap
+      ul.related-products__container-list
+        li.related-products__container-list-item
+          ul.related-products__list
+            each item in [1, 2, 3, 4, 5]
+              li.related-products__list-item
+                .related-products__card
+                  img.related-products__img(src=require('../../components/related-products/img/image.png'), alt='Изображение товара')
+                  .related-products__content
+                    h6.related-products__name Фильтр дополнительной очистки многоразовый (моющийся) IQAir PF40
+                    p.related-products__desc Комплект из 3х многоразовых (моющихся) фильтрующих элементов с крепёжными элементами. Задерживает крупные частицы пыли, шерсть животных и иные крупноразмерные загрязнители.
+                    .related-products__content-footer
+                      p.related-products__price 13 990 руб.
+                      button.related-products__btn-to-cart(type='button') Добавить в корзину
+        li.related-products__container-list-item
+          ul.related-products__list
+            each item in [1, 2, 3, 4, 5]
+              li.related-products__list-item
+                .related-products__card
+                  img.related-products__img(src=require('../../components/related-products/img/image.png'), alt='Изображение товара')
+                  .related-products__content
+                    h6.related-products__name Фильтр дополнительной очистки многоразовый (моющийся) IQAir PF40
+                    p.related-products__desc Комплект из 3х многоразовых (моющихся) фильтрующих элементов с крепёжными элементами. Задерживает крупные частицы пыли, шерсть животных и иные крупноразмерные загрязнители.
+                    .related-products__content-footer
+                      p.related-products__price 13 990 руб.
+                      button.related-products__btn-to-cart(type='button') Добавить в корзину
+    

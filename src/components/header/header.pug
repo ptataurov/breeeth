@@ -1,0 +1,46 @@
+mixin header(links)
+  header.header
+    .header__top
+      .container
+        .row.align-items-center.justify-content-between
+          .col-md-auto.col-12
+            nav.header__top__nav
+              ul
+                each link in links.menu
+                  li
+                    a(href=`${link.href}`)= link.title
+          .col-md-auto.col-12
+            .header__bar
+              button.header__location
+                include img/icons/location.svg
+                | Москва
+              .header__search
+                form
+                  input.header__search__input(type='text' placeholder='Поиск по сайту')
+                  button.header__search__button(type='submit')
+                    include img/icons/search.svg
+              a.header__auth(href='#')
+                include img/icons/login.svg
+              a.header__card(href='#')
+                include img/icons/cart.svg
+    .container
+      .row.align-items-center.justify-content-between
+        .col-auto.d-md-none
+          button.header__bars
+            span
+            span
+            span
+        .col-md-auto.col-12.order-1.mx-auto.mx-md-0
+          .header__logo
+            a(href='#')
+              include img/logo.svg
+        .col-lg-auto.col-12.order-lg-2.order-3
+          nav.header__nav
+            ul
+              each link in links.category
+                li
+                  a(href=`${link.href}`)= link.title
+              li
+                  a.accent(href='#') % SALE
+        .col-auto.order-lg-3.order-2.ml-xl-0.ml-auto.mr-auto.mr-md-0
+          a.header__tel(href='tel:88003330755') 8 800 333-07-55

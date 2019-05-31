@@ -1,0 +1,305 @@
+.header {
+  padding: 5px 0 19px;
+  border-bottom: 1px solid #f2f4f7;
+
+  @include mq-less-sm {
+    border-bottom: 1px solid #f2f4f7;
+  }
+}
+
+.header__top {
+  margin-bottom: 19px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f2f4f7;
+}
+
+.header__top__nav {
+  color: #7d828f;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include mq-less-md {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  @media (max-width: 359px) {
+    font-size: 8px;
+  }
+
+  ul {
+    display: flex;
+
+    @include mq-less-md {
+      justify-content: space-between;
+    }
+
+    @include mq-less-sm {
+      justify-content: space-between;
+    }
+  }
+
+  li {
+    margin-right: 21px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq-less-lg {
+      margin-right: 15px;
+    }
+
+    @include mq-less-md {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    &:hover {
+      color: #f47a20;
+    }
+  }
+}
+
+.header__bar {
+  display: flex;
+  align-items: center;
+
+  @include mq-less-md {
+    margin-top: 10px;
+  }
+
+  > * {
+    margin-right: 40px;
+
+    @include mq-less-lg {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-right: 17px;
+
+      @include mq-less-md {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.header__search {
+  position: relative;
+  z-index: 1;
+  margin-right: 29px;
+  border-radius: 20px;
+
+  @include mq-less-lg {
+    margin-right: 10px !important;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    content: '';
+  }
+}
+
+.header__search__input {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 20px;
+}
+
+.header__search__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+}
+
+.header__search.active {
+  background-color: #f6f7f8;
+
+  &:before {
+    display: none;
+  }
+
+  .header__search__input {
+    width: 270px;
+    background-color: #f6f7f8;
+  }
+
+  .header__search__button {
+    background-color: #f6f7f8;
+  }
+}
+
+.header__location {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 34px;
+  padding: 0;
+  color: #7d828f;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+
+  @include mq-less-lg {
+    margin-right: 15px;
+  }
+
+  @include mq-less-md {
+    margin-right: auto;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.header__nav {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include mq-less-lg {
+    margin-top: 15px;
+  }
+
+  @include mq-less-md {
+    display: none;
+    margin-top: 0;
+  }
+
+  ul {
+    display: flex;
+
+    @include mq-less-lg {
+      justify-content: space-between;
+    }
+
+    @include mq-less-md {
+      display: block;
+    }
+  }
+
+  li {
+    margin-right: 30px;
+
+    @include mq-less-lg {
+      margin-right: 0;
+    }
+
+    @include mq-less-md {
+      margin: 15px 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    &:hover {
+      color: #f47a20;
+    }
+  }
+
+  .accent {
+    color: #f47a20;
+  }
+}
+
+.header__tel {
+  font-weight: 600;
+  font-size: 18px;
+
+  &:hover {
+    color: #f47a20;
+  }
+
+  @include mq-less-md {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+.header__logo {
+  @include mq-less-md {
+    text-align: center;
+  }
+}
+
+.header__auth,
+.header__card {
+  display: block;
+  line-height: 0;
+}
+
+.header__bars {
+  position: absolute;
+  z-index: 6;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 25px;
+  padding: 0;
+  vertical-align: middle;
+  background-color: #a3b3dd;
+  border: none;
+  border-radius: 50%;
+
+  span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    margin: 4px auto;
+    background-color: #fff;
+    transition: 250ms;
+    &:first-child {
+      transform-origin: 100% 50%;
+    }
+    &:last-child {
+      transform-origin: 100% 50%;
+    }
+  }
+}
+
+.header__bars.active {
+  span {
+    &:first-child {
+      transform: translate(-3px, -1.5px) rotate(-45deg);
+    }
+
+    &:last-child {
+      transform: translate(-3px, 1.5px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      width: 0;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+mixin product-head(links)
+  section.product-head
+    .product-head__scroll-wrap
+      .product-head__top
+        .container.d-flex.align-items-center
+          h1.product-head__title IQAir CleanZone 5200
+          p.product-head__price 891 990 руб.
+          .product-head__btn-group
+            button.product-head__btn-to-credit В рассрочку
+            button.product-head__btn-to-cart Добавить в корзину
+      .product-head__nav-wrap
+        .container
+          nav.product-head__nav
+            ul.product-head__list
+              each link in links
+                li.product-head__list-item
+                  a.product-head__list-link(href=`${link.href}`)= link.title
+    .product-head__product-img-block
+      img.product-head__img(src=require('../../components/product-head/img/product-photo.png'))

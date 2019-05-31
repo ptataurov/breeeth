@@ -1,0 +1,21 @@
+.breadcrumbs {
+  font-size: 13px;
+  line-height: 1.23;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    color: #7d828f;
+    &:hover {
+      color: #f47a20;
+      & + svg path {
+        stroke: #a3b3dd;
+      }
+    }
+  }
+  svg {
+    margin-right: 9px;
+    margin-left: 11px;
+  }
+}

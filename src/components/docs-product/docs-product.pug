@@ -1,0 +1,39 @@
+mixin docs-product
+  section#docs-product.docs-product
+    h6.docs-product__title Документация
+    ul.docs-product__list
+      -
+        var docs = [
+          {
+            name: 'Руководство по эксплуатации IQAir HealthPro 250.pdf',
+            ext: 'PDF',
+            size: '3 мб',
+            href: '#'
+          },
+          {
+            name: 'Эффект многоуровневой очистки воздуха с применением технологии HyperHEPA у больных сезонным аллергическим ринитом и бронхиальной астмой.pdf',
+            ext: 'PDF',
+            size: '3 мб',
+            href: '#'
+          },
+          {
+            name: 'Отчет об исследовании эффективности и переносимости создания гипоаллергенного пространства с использованием очистиителя воздуха IQAir HealthPro 250 в комплексной терапии больных с сезонным аллергическим ринитом.pdf',
+            ext: 'PDF',
+            size: '3 мб',
+            href: '#'
+          },
+          {
+            name: 'Оценка эффективности и переносимости технологии создания гипоаллергенного пространства с использованием очистиителя воздуха IQAir HealthPro 250 в комплексной терапии больных с сезонным аллергическим ринитом и бронхиаль.pdf',
+            ext: 'PDF',
+            size: '3 мб',
+            href: '#'
+          },
+        ]
+      each doc in docs
+        li.docs-product__list-item
+          a.docs-product__link(href=`${doc.href}`)
+            .docs-product__icon
+              include ../../components/docs-product/img/icons/download.svg
+            .docs-product__content
+              p.docs-product__doc-name= doc.name
+              p.docs-product__doc-info= `${doc.ext}, ${doc.size}`

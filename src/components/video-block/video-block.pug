@@ -1,0 +1,6 @@
+mixin video-block(data)  
+  .container.video-block.max-width-960px
+    .row
+      .video-block__content
+        video(controls='controls' poster=`${data.poster}`)
+          source(src=`${data.src}`)
