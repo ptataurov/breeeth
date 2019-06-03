@@ -53,6 +53,6 @@
     "normalize.css": "^8.0.1"
   },
   "browserslist": [
-    "last 15 version"
+    "defaults"
   ]
 }

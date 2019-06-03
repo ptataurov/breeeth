@@ -2,20 +2,17 @@ extends ../layout
 
 include ../../components/header/header
 include ../../components/breadcrumbs/breadcrumbs
-include ../../components/product-head/product-head
-
+include ./components/product-head/product-head
 include ../../components/section-header/section-header
-include ../../components/eff-section/eff-section
-include ../../components/press-section/press-section
-include ../../components/trial-section/trial-section
-include ../../components/partners-section/partners-section
-include ../../components/related-products/related-products
-include ../../components/product-reviews/product-reviews
-include ../../components/docs-product/docs-product
+include ./components/eff-section/eff-section
+include ./components/press-section/press-section
+include ./components/trial-section/trial-section
+include ./components/partners-section/partners-section
+include ./components/related-products/related-products
+include ./components/product-promo/product-promo
+include ./components/product-reviews/product-reviews
+include ./components/docs-product/docs-product
 include ../../components/footer/footer
-
-
-
 
 block content
   - 
@@ -152,99 +149,7 @@ block content
 
     +trial-section
 
-    section.product-page__promo1
-      - 
-        var promo1Data = {
-          title: 'Защита от газов и запахов',
-          desc: `Каждый адсорбент смесей IQAir предназначен для контроля конкретных классов газовых загрязнителей. Например, для защиты от паров ртути (HG) или аммиака(AM). Вместе с тем, для использования очистителей воздуха в обычных жилых помещениях и офисах IQAir предлагает фильтр со смесью MG (MultiGas), который состоит в свою очередь из смесей адсорбентов VOC и ChemiSorber, что позволяет контролировать максимально широкий список газовых загрязнителей.`
-        }
-
-      +section-header(promo1Data)
-      img.product-page__promo1-img(src=require('./img/promo/promo1.png'), alt='Изображение')
-
-    section.product-page__promo2.max-width-1400px
-      - 
-        var promo2Data = {
-          title: 'Технологичный корпус',
-          desc: `Материал корпуса не выделяет вредных газов, ударопрочный, стойкий к ультрафиолетовому излучению. Чистый воздух выходит во все стороны - 320⁰. Каждая модель укомплектована роликами (кроме серии GCX и Cleanroom H13), а значит вы можете легко перемещать очиститель воздуха по помещениям`
-        }
-
-      +section-header(promo2Data)
-      img.product-page__promo2-img(src=require('./img/promo/promo2.png'), alt='Изображение')
-      p.product-page__promo2-para Ни один очиститель воздуха IQAir не использует опасные технологии, основанные на принципах очистки воздуха озоном (озон - вещество первого класса опасности) или ионизации воздуха. Вы можете без опасений использовать очиститель воздуха IQAir при аллергических реакциях или болезнях легких.
-
-    section.product-page__promo3
-      img.product-page__promo3-img(src=require('./img/promo/promo3.png'), alt='Изображение')
-      .product-page__promo3-content
-        h6.product-page__promo3-title Удобное управление
-        ul.product-page__promo3-list
-          li.product-page__promo3-list-item Недельный таймер с возможностью установок скорости и времени включения и выключения для каждого дня недели
-          li.product-page__promo3-list-item Индикация необходимости замены каждого фильтра
-          li.product-page__promo3-list-item 6 скоростей
-          li.product-page__promo3-list-item Защита от детей (блокировка кнопок)
-          li.product-page__promo3-list-item Пульт Д/У
-          li.product-page__promo3-list-item ЖК дисплей
-
-    section.product-page__promo4
-      -
-        var promo4Data = {
-          title: 'Ночной режим',
-          desc: 'Используйте очистители воздуха IQAir во время сна или отдыха. IQAir обеспечит очистку 50 м3/час на первой скорости и 100 м3/час на второй. Этого более чем достаточно для любой спальни или детской комнаты. При необходимости полностью избавиться от шума используйте оригинальный аксессуар <span style="color: #A3B3DD;">IQAir OutFlow™ W125</span>'
-        }
-
-      +section-header(promo4Data)
-
-    section.product-page__promo5.container
-      img.product-page__promo5-img(src=require('./img/promo/promo5.png'), alt='Изображение')
-      .product-page__promo5-content
-        h6.product-page__promo5-title Качественная сборка
-        p.product-page__promo5-para Индивидуальная сертификация каждого очистителя воздуха с указанием его уникальных характеристик очистки в гарантийном сертификате при выпуске с конвейера.
-        p.product-page__promo5-para Каждый двигатель с вентилятором балансируется индивидуально, тем самым исключается возможность даже малейших вибраций во время работы.
-        p.product-page__promo5-para Подшипник двигателя рассчитан на длительный круглосуточный режим работы без рисков перегрева.
-
-    section.product-page__promo6.container
-      .product-page__promo6-content
-        h6.product-page__promo6-title Клинические исследования IQAir с HyperHEPA фильтром
-        p.product-page__promo6-para Многие производители заявляют о пользе своих очистителей воздуха для здоровья. Единственным обоснованием медицинской пользы конкретных очистителей воздуха могут быть только опубликованные в открытом доступе клинические исследования:
-        ul.product-page__promo6-list
-          li.product-page__promo6-list-item 
-            a.product-page__promo6-list-link(href='#' target='_blank') Отчёт №1
-          li.product-page__promo6-list-item 
-            a.product-page__promo6-list-link(href='#' target='_blank') Отчёт №2
-          li.product-page__promo6-list-item 
-            a.product-page__promo6-list-link(href='#' target='_blank') Отчёт №3
-      img.product-page__promo6-img(src=require('./img/promo/promo6.png'), alt='Изображение')
-
-    section.product-page__promo7
-      .container
-        .row
-          .col.offset-sm-2.offset-lg-6
-            .product-page__promo7-content
-              h6.product-page__promo7-title Международная практика IQAir
-              p.product-page__promo7-para Во время вспышки атипичной пневмонии в Гонконге в 2003 году, орган управления государственными медицинскими заведениями выбрал очистители воздуха IQAir с HyperHEPA фильтрами для защиты сотрудников и пациентов от вируса SARS
-
-    section.product-page__promo8
-      - 
-        var promo8Data = {
-          title: 'Чистая комната с IQAir',
-          desc: 'Институты, лаборатории и производства по всему миру используют очистители воздуха IQAir для создания «чистых» помещений. Используйте свой очиститель воздуха IQAir с фирменным фильтром HyperHEPA™ как обычный бытовой прибор или создайте «чистую комнату», используя оригинальные аксессуары <br> <span style="color: #A3B3DD;">IQAir InFlow™ W125</span> и <span style="color: #A3B3DD;">IQAir OutFlow™ W125</span>'
-        }
-
-      +section-header(promo8Data)
-      .product-page__promo8-container
-        .product-page__promo8-content-wrap
-          .product-page__promo8-content
-            h6.product-page__promo8-title Хотите дышать качественным воздухом?
-            p.product-page__promo8-para В Москве и Московской области, а также в Санкт-Петербурге и Ленинградской области мы готовы провести демонстрацию эффективности очистителей воздуха IQAir, а при необходимости, сделать замеры эффективности Вашего оборудования и сравнить результаты
-            button.product-page__promo8-btn(type='button') Заказать демонстрацию IQAir
-          
-    section.product-page__promo9
-      .product-page__promo9-container
-        img.product-page__promo9-img(src=require('./img/promo/promo9.png'), alt='Изображение')
-        .product-page__promo9-content
-          h6.product-page__promo9-title Стоимость обслуживания
-          p.product-page__promo9-para Нет необходимости разбирать и собирать воздухоочиститель для обслуживания фильтров (промывать, пылесосить). Только редко менять фильтры.
-          p.product-page__promo9-para Средние сроки службы фильтров составляют от 16 до 59 месяцев — вам не придется менять их каждый год. Замените только тот фильтр, срок службы которого истек.
+    +product-promo
 
     +partners-section
     

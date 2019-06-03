@@ -1,21 +1,20 @@
-
 mixin press-section
 
   - 
     var reviews = [
       {
         title: 'BORK A804 против IQAir. Обзор и тест очистителей воздуха',
-        src: require('../../components/press-section/img/review-1.png'),
+        src: require('./components/press-section/img/review-1.png'),
         href: '#'
       },
       {
         title: 'Как сделать воздух чище с IQAir HealthPro 250',
-        src: require('../../components/press-section/img/review-2.png'),
+        src: require('./components/press-section/img/review-2.png'),
         href: '#'
       },
       {
         title: 'Обзор и сравнение шести очистителей воздуха',
-        src: require('../../components/press-section/img/review-3.png'),
+        src: require('./components/press-section/img/review-3.png'),
         href: '#'
       }
     ]
@@ -24,22 +23,22 @@ mixin press-section
     var platforms = [
       {
         title: 'Обзор на YouTube',
-        src: require('../../components/press-section/img/logos/logo-1.svg'),
+        src: require('./components/press-section/img/logos/logo-1.svg'),
         href: '#'
       },
       {
         title: 'Обзор на HI-TECH@MAIL.RU',
-        src: require('../../components/press-section/img/logos/logo-2.svg'),
+        src: require('./components/press-section/img/logos/logo-2.svg'),
         href: '#'
       },
       {
         title: 'Обзор в журнале «Потребитель»',
-        src: require('../../components/press-section/img/logos/logo-3.png'),
+        src: require('./components/press-section/img/logos/logo-3.png'),
         href: '#'
       },
       {
         title: 'Обзор программы «Чудо техники»',
-        src: require('../../components/press-section/img/logos/logo-4.png'),
+        src: require('./components/press-section/img/logos/logo-4.png'),
         href: '#'
       }
     ]
@@ -49,7 +48,7 @@ mixin press-section
       .row.press-section__banner-block
         .col
           a.press-section__banner-link.w-100(href='#')
-            img.press-section__banner-img.img-responsive(src=require('../../components/press-section/img/banner.png'), alt='Баннер')
+            img.press-section__banner-img.img-responsive(src=require('./components/press-section/img/banner.png'), alt='Баннер')
       .row.press-section__reviews-block
         each review in reviews
           .col-12.col-lg-4.mb-4.mb-lg-0.press-section__review

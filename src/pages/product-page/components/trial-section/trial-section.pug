@@ -1,4 +1,7 @@
 mixin trial-section
+  include ~@/components/section-header/section-header
+  include ~@/components/video-block/video-block
+
   section#trial-section.trial-section
     -
       var headerData = {
@@ -9,7 +12,6 @@ mixin trial-section
         - более 99,5%, а для частиц от 300 нанометров (0,3 микрона) - более 99,97%.`
       }
 
-    include ../section-header/section-header
     +section-header(headerData)
 
     .container.max-width-960px
@@ -17,5 +19,4 @@ mixin trial-section
         .col.trial-section__chart
           include ./img/chart.svg
     
-    include ../video-block/video-block
     +video-block({ poster: 'https://www.breeethretail.ru/iqair_250/img/section-6-img.jpg', src: 'https://www.breeethretail.ru/iqair_250/img/video2.mp4'})

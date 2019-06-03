@@ -1,4 +1,8 @@
 mixin eff-section
+  include ~@/components/section-header/section-header
+  include ~@/components/video-block/video-block
+
+
   section#eff-section.eff-section
     -
       var title1 = {
@@ -7,7 +11,6 @@ mixin eff-section
         desc: `Эффективность IQAir – это не теоретическая эффективность стандарта фильтров, а эффективность всего очистителя воздуха`
       }
 
-    include ../section-header/section-header
     +section-header(title1)
 
     .container
@@ -35,7 +38,6 @@ mixin eff-section
               br
               | задерживает IQAir HealPro 250
     
-    include ../video-block/video-block
     +video-block({ poster: 'https://www.breeethretail.ru/iqair_250/img/section-2-img.jpg', src: 'https://www.breeethretail.ru/iqair_250/img/video1.mp4'})
 
     -
@@ -45,7 +47,6 @@ mixin eff-section
         desc: `В IQAir HealthPro 250 очистка воздуха происходит в три этапа: предварительный фильтр защищает от крупной пыли, газовый фильтр — от газов и запахов, фильтр HyperHEPA – задерживает все известные аллергены, вирусы и бактерии, находящиеся в воздухе`
       }
 
-    include ../section-header/section-header
     +section-header(title2)
 
     .container.max-width-960px
@@ -57,7 +58,7 @@ mixin eff-section
               br
               | PreMax™ Filter F8 (S)
             .eff-section__card-img-container
-              img.eff-section__card-img(src=require('../../components/eff-section/img/filter-1.png') alt='Фото фильтра')
+              img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
             p.eff-section__card-desc
               | Задержка крупных и мелких частиц, защита последующих фильтров. Нетканное стеклянное микроволокно, плиссированное для повышения емкости
             ul.eff-section__card-list
@@ -77,7 +78,7 @@ mixin eff-section
               br
               | V5-Cell™ Filter MG
             .eff-section__card-img-container
-              img.eff-section__card-img(src=require('../../components/eff-section/img/filter-2.png') alt='Фото фильтра')
+              img.eff-section__card-img(src=require('./components/eff-section/img/filter-2.png') alt='Фото фильтра')
             p.eff-section__card-desc
               | Контроль широкого спектра химических примесей и запахов. Multigas™ гранулированный активированный уголь и пропитанный активированный оксид алюминия (AC/4 + IA/4)
             ul.eff-section__card-list
@@ -94,7 +95,7 @@ mixin eff-section
               br
               | HyperHEPA® Filter H12/13 (L)
             .eff-section__card-img-container
-              img.eff-section__card-img(src=require('../../components/eff-section/img/filter-3.png') alt='Фото фильтра')
+              img.eff-section__card-img(src=require('./components/eff-section/img/filter-3.png') alt='Фото фильтра')
             p.eff-section__card-desc
               | Задержка мелких и ультрамелких частиц. Нетканное стеклянное микроволокно
             ul.eff-section__card-list
@@ -115,7 +116,7 @@ mixin eff-section
               | моющийся фильтр PF40 
               span.eff-section__card-title-footnote *
             .eff-section__card-img-container
-              img.eff-section__card-img(src=require('../../components/eff-section/img/filter-1.png') alt='Фото фильтра')
+              img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
             p.eff-section__card-desc
               | Задержка крупных и мелких частиц. Нетканый синтетический материал
             ul.eff-section__card-list

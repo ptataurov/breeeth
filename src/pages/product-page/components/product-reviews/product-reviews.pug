@@ -4,9 +4,9 @@ mixin product-reviews
       p.product-reviews__title Отзывы
       .product-reviews__btn-group
         button.product-reviews__btn-prev(type='button' data-btn-prev)
-          include ../../components/product-reviews/img/icons/arrow.svg
+          include ./img/icons/arrow.svg
         button.product-reviews__btn-next(type='button' data-btn-next)
-          include ../../components/product-reviews/img/icons/arrow.svg
+          include ./img/icons/arrow.svg
     .product-reviews__card-list-wrap
       ul.product-reviews__container-list(data-container)
         li.product-reviews__container-list-item
@@ -16,7 +16,7 @@ mixin product-reviews
                 ul.product-reviews__rating-list
                   each start in [1, 2, 3, 4, 5]
                     li.product-reviews__rating-list-item
-                      include ../../components/product-reviews/img/icons/star.svg
+                      include ./img/icons/star.svg
                 p.product-reviews__card-para Понравился этот магазин своим широким ассортиментом . И так как я целый день нахожусь в офисе, где большой приток клиентов, согласовала с руководством покупку воздухоочистителя. Менеджер рассказал мне подробно о преимуществах аппарата и помог определиться с выбором. Быстро оформил заказ, и уже через 2 дня воздухоочиститель доставили по адресу. Меня это обрадовало, так как это довольно оперативно. Заплатила я наличными, что тоже удобно и надежно при подобной сделке. Надеюсь, что долго прослужит. Сотрудничество с магазином оказалось приятным.
                 .product-reviews__card-footer
                   p.product-reviews__card-name Юлия Фролова
@@ -31,7 +31,7 @@ mixin product-reviews
                 ul.product-reviews__rating-list
                   each start in [1, 2, 3, 4, 5]
                     li.product-reviews__rating-list-item
-                      include ../../components/product-reviews/img/icons/star.svg
+                      include ./img/icons/star.svg
                 p.product-reviews__card-para Понравился этот магазин своим широким ассортиментом . И так как я целый день нахожусь в офисе, где большой приток клиентов, согласовала с руководством покупку воздухоочистителя. Менеджер рассказал мне подробно о преимуществах аппарата и помог определиться с выбором. Быстро оформил заказ, и уже через 2 дня воздухоочиститель доставили по адресу. Меня это обрадовало, так как это довольно оперативно. Заплатила я наличными, что тоже удобно и надежно при подобной сделке. Надеюсь, что долго прослужит. Сотрудничество с магазином оказалось приятным.
                 .product-reviews__card-footer
                   p.product-reviews__card-name Юлия Фролова
