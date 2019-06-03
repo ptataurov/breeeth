@@ -58,7 +58,7 @@ const config = {
     hot: false,
     open: true
   },
-  mode: !isDev ? 'production' : 'development',
+  mode: isDev ? 'development' : 'production',
   watch: isDev,
   module: {
     rules: [
