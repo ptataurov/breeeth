@@ -1,37 +1,73 @@
-mixin footer(links)
-  footer.footer
-    .container
-      .row.align-items-center.justify-content-between
-        .col-md-auto.col-12
-          .footer__logo
-            a(href='')
-              img(src=require('../../components/footer/img/logo.png') alt='Логотип')
-        .col-lg-auto.col
-          nav.footer__nav
-            ul
-              each link in links.menu 
-                li
-                  a(href=`${link.href}`)= link.title
-              
-      .row.align-items-center.justify-content-between.footer__phone
-        each link in links.contacts
-          .col-md-auto.col-12
-            a.footer__phone__tel(href=`${link.href}`)= link.phone
-            p.footer__phone__label= link.label
+mixin footer
 
-      .footer__bot
-        .row.align-items-center
-          .col-md-4
-            p.footer__copyright
-              | © 2009—2019 Центр экологии жилья Breeeth!
-          .col-md-auto.mx-auto
-            a(href='#') Политика конфиденциальности
-          .col-md-4
-            .footer__soc
-              ul
-                li
-                  a(href='#' target='_blank')
-                    img(src=require('../../components/footer/img/icons/insta.png') alt='Иконка Instagram')
-                li
-                  a(href='#' target='_blank')
-                    img(src=require('../../components/footer/img/icons/facebook.png') alt='Иконка Facebook')
+  -
+    var links = {
+      menu: [
+        {
+          href: '#',
+          title: 'Контакты'
+        },
+        {
+          href: '#',
+          title: 'Возврат'
+        },
+        {
+          href: '#',
+          title: 'Оплата'
+        },
+        {
+          href: '#',
+          title: 'Доставка'
+        },
+        {
+          href: '#',
+          title: 'О компании'
+        }
+      ],
+      contacts: [
+        {
+          href: 'tel:84992884012',
+          phone: '8 499 288-40-12',
+          label: 'Бесплатно по РФ'
+        },
+        {
+          href: 'tel:84955454675',
+          phone: '8 495 545-46-75',
+          label: 'Офис в Москве'
+        },
+        {
+          href: 'tel:88123631665',
+          phone: '8 812 363-16-65',
+          label: 'Офис в Санкт-Петербурге'
+        }
+      ]
+    }
+
+  footer.footer
+    .footer__wrap
+      .footer__top
+        .footer__logo
+          include ./img/logo.svg
+        nav.footer__nav
+          ul.footer__nav-list
+            each link in links.menu 
+              li.footer__nav-list-item
+                a.footer__nav-link(href=`${link.href}`)= link.title
+      ul.footer__contacts-list
+        each link in links.contacts
+          li.footer__contacts-list-item
+            .footer__contacts-content
+              a.footer__contacts-link(href=`${link.href}`)= link.phone
+              p.footer__contacts-label= link.label
+      
+      .footer__bottom
+        p.footer__copyright © 2009—2019 Центр экологии жилья Breeeth!
+        a.footer__privacy-link(href='#') Политика конфиденциальности
+        ul.footer__social-list
+          li.footer__social-lits-item
+            a.footer__social-link(href='#' target='_blank')
+              include ./img/icons/insta.svg
+          li.footer__social-lits-item
+            a.footer__social-link(href='#' target='_blank')
+              include ./img/icons/facebook.svg
+

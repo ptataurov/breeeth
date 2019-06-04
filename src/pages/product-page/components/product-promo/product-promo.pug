@@ -10,17 +10,17 @@ mixin product-promo
           desc: `Каждый адсорбент смесей IQAir предназначен для контроля конкретных классов газовых загрязнителей. Например, для защиты от паров ртути (HG) или аммиака(AM). Вместе с тем, для использования очистителей воздуха в обычных жилых помещениях и офисах IQAir предлагает фильтр со смесью MG (MultiGas), который состоит в свою очередь из смесей адсорбентов VOC и ChemiSorber, что позволяет контролировать максимально широкий список газовых загрязнителей.`
         }
 
-      +section-header(promo1Data)
+      +section-header(promo1Data, 'product-promo')
       img.product-promo__promo1-img(src=require('./img/promo/promo1.png'), alt='Изображение')
 
-    .product-promo__promo2.max-width-1400px
+    .product-promo__promo2
       - 
         var promo2Data = {
           title: 'Технологичный корпус',
           desc: `Материал корпуса не выделяет вредных газов, ударопрочный, стойкий к ультрафиолетовому излучению. Чистый воздух выходит во все стороны - 320⁰. Каждая модель укомплектована роликами (кроме серии GCX и Cleanroom H13), а значит вы можете легко перемещать очиститель воздуха по помещениям`
         }
 
-      +section-header(promo2Data)
+      +section-header(promo2Data, 'product-promo')
       img.product-promo__promo2-img(src=require('./img/promo/promo2.png'), alt='Изображение')
       p.product-promo__promo2-para Ни один очиститель воздуха IQAir не использует опасные технологии, основанные на принципах очистки воздуха озоном (озон - вещество первого класса опасности) или ионизации воздуха. Вы можете без опасений использовать очиститель воздуха IQAir при аллергических реакциях или болезнях легких.
 
@@ -45,7 +45,7 @@ mixin product-promo
 
       +section-header(promo4Data)
 
-    .product-promo__promo5.container
+    .product-promo__promo5
       img.product-promo__promo5-img(src=require('./img/promo/promo5.png'), alt='Изображение')
       .product-promo__promo5-content
         h6.product-promo__promo5-title Качественная сборка
@@ -53,7 +53,7 @@ mixin product-promo
         p.product-promo__promo5-para Каждый двигатель с вентилятором балансируется индивидуально, тем самым исключается возможность даже малейших вибраций во время работы.
         p.product-promo__promo5-para Подшипник двигателя рассчитан на длительный круглосуточный режим работы без рисков перегрева.
 
-    .product-promo__promo6.container
+    .product-promo__promo6
       .product-promo__promo6-content
         h6.product-promo__promo6-title Клинические исследования IQAir с HyperHEPA фильтром
         p.product-promo__promo6-para Многие производители заявляют о пользе своих очистителей воздуха для здоровья. Единственным обоснованием медицинской пользы конкретных очистителей воздуха могут быть только опубликованные в открытом доступе клинические исследования:

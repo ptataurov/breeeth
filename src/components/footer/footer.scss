@@ -1,123 +1,177 @@
 .footer {
-  margin-right: -20px;
-  margin-left: -20px;
   padding-top: 60px;
-  color: #fff;
   background: url(~@/components/footer/img/footer-bg.png) center 0 no-repeat;
   background-size: cover;
+}
 
-  @include mq-less-md {
-    margin-right: 0;
-    margin-left: 0;
-    text-align: center;
+.footer__wrap {
+  @include container;
+}
+
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+
+  @include mq-less-lg {
+    justify-content: center;
+    margin-bottom: 30px;
   }
+}
 
-  a {
-    border-bottom: 2px solid transparent;
-    &:hover {
-      color: #fff;
-      border-bottom-color: #b2c2e4;
-    }
+.footer__logo {
+  @include mq-less-lg {
+    margin-bottom: 20px;
   }
 }
 
 .footer__nav {
-  margin-top: 17px;
+  @include mq-less-lg {
+    flex-basis: 100%;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq-less-lg {
+    justify-content: center;
+  }
+}
+
+.footer__nav-list-item {
+  &:not(:last-child) {
+    margin-right: 60px;
+
+    @include mq-less-lg {
+      margin-right: 30px;
+    }
+
+    @include mq-less-sm {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__nav-link {
+  color: #fff;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
 
-  ul {
-    display: flex;
-    @include mq-less-lg {
-      justify-content: space-between;
-    }
+.footer__contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #aabbe1;
 
-    @include mq-less-md {
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-  }
-
-  li {
-    margin-right: 30px;
-    @include mq-less-lg {
-      margin-right: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-    &:not(:last-child) {
-      margin-right: 65px;
-
-      @include mq-less-lg {
-        margin-right: 0px;
-      }
-    }
-  }
-  a {
-    border-bottom: 2px solid transparent;
-    &:hover {
-      color: #fff;
-      border-bottom-color: #b2c2e4;
-    }
+  @include mq-less-lg {
+    padding-bottom: 40px;
   }
 }
 
-.footer__soc {
-  ul {
-    display: flex;
+.footer__contacts-list-item {
+  display: flex;
+  flex-basis: 33.333333%;
+  text-align: center;
+
+  &:nth-child(2) {
+    justify-content: center;
+  }
+
+  &:nth-child(3) {
     justify-content: flex-end;
 
-    @include mq-less-md {
+    @include mq-less-lg {
       justify-content: center;
     }
   }
-  li:not(:last-child) {
-    margin-right: 19px;
-  }
-  a {
-    border: none !important;
+
+  @include mq-less-lg {
+    flex-basis: 100%;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
-.footer__phone {
-  margin-top: 62px;
-  margin-bottom: 61px;
+.footer__contacts-content {
+  display: inline-block;
+}
+
+.footer__contacts-link {
+  color: #fff;
   font-weight: 500;
-  text-align: center;
-  &__tel {
-    font-size: 22px;
-  }
-  &__label {
-    font-size: 13px;
+  font-size: 22px;
+}
+
+.footer__contacts-label {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 50px;
+
+  @include mq-less-lg {
+    padding: 20px 0;
   }
 
-  > * {
-    @include mq-less-md {
-      margin: 10px 0;
+  * {
+    flex: 1;
+    flex-basis: 33.333333%;
+    @include mq-less-lg {
+      flex-basis: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
-  }
-
-  @include mq-less-md {
-    margin: 15px 0;
   }
 }
 
-.footer__bot {
-  padding: 39px 0 51px;
-  font-size: 13px;
-  border-top: 1px solid #a9bbdf;
+.footer__copyright {
+  text-align: left;
+}
 
-  @include mq-less-md {
-    padding: 25px 0;
+.footer__privacy-link {
+  text-align: center;
+}
+
+.footer__social-list {
+  text-align: right;
+}
+
+.footer__copyright,
+.footer__social-list {
+  @include mq-less-lg {
+    text-align: center;
   }
+}
 
-  .row > * {
-    @include mq-less-md {
-      margin: 5px 0;
-    }
+.footer__copyright,
+.footer__privacy-link {
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.footer__social-lits-item {
+  display: inline-block;
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 }

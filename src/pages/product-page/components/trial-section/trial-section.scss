@@ -1,5 +1,9 @@
 @import '~@/components/video-block/video-block';
 
+.trial-section {
+  @include content-width;
+}
+
 .trial-section__chart {
   margin-top: 50px;
 

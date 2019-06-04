@@ -1,0 +1,13 @@
+@import '~@/components/breadcrumbs/breadcrumbs';
+
+.product-breadcrumbs {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.product-breadcrumbs__logo-brand {
+  margin-left: 20px;
+}

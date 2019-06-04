@@ -44,20 +44,18 @@ mixin press-section
     ]
 
   section#press-section.press-section
-    .container.max-width-960px
-      .row.press-section__banner-block
-        .col
-          a.press-section__banner-link.w-100(href='#')
-            img.press-section__banner-img.img-responsive(src=require('./components/press-section/img/banner.png'), alt='Баннер')
-      .row.press-section__reviews-block
-        each review in reviews
-          .col-12.col-lg-4.mb-4.mb-lg-0.press-section__review
-            a.press-section__review-link(href=`${review.href}`)
-              img.press-section__review-img.img-responsive(src=`${review.src}`, alt=`${review.title}`)
-              p.press-section__review-title= review.title
-      .row.press-section__platforms-block
-        each platform in platforms
-          .col-12.col-lg-3.press-section__platform.mb-3.mb-lg-0
-            a.press-section__platform-link(href=`${platform.href}` target='_blank')
-              img.press-section__platform-img(src=`${platform.src}`, alt=`${platform.title}`)
-              p.press-section__platform-title= platform.title
+    .press-section__banner-block
+      a.press-section__banner-link.w-100(href='#')
+        img.press-section__banner-img.img-responsive(src=require('./components/press-section/img/banner.png'), alt='Баннер')
+    .press-section__reviews-container
+      each review in reviews
+        .press-section__review
+          a.press-section__review-link(href=`${review.href}`)
+            img.press-section__review-img.img-responsive(src=`${review.src}`, alt=`${review.title}`)
+            p.press-section__review-title= review.title
+    .press-section__platforms-container
+      each platform in platforms
+        .press-section__platform
+          a.press-section__platform-link(href=`${platform.href}` target='_blank')
+            img.press-section__platform-img(src=`${platform.src}`, alt=`${platform.title}`)
+            p.press-section__platform-title= platform.title

@@ -1,31 +1,31 @@
 const $ = require('jquery')
 
-$(function() {
-  const $headerNav = $('.header__nav', '.header')
+const $search = $('.header__search', '.header')
+const $hamburger = $('.header__btn-hamburger')
+const $categoryNav = $('.header__category-nav', '.header')
 
-  $('.header__search').on('click', function(e) {
-    e.preventDefault()
-    $(this).addClass('active')
-  })
+$hamburger.click(function() {
+  $(this).toggleClass('header__btn-hamburger--active')
+  $categoryNav.toggleClass('header__category-nav--show')
+})
 
-  $(document).mouseup(function(e) {
-    let button = $('.header__search, .header__search *')
-    if (!button.is(e.target)) {
-      $('.header__search').removeClass('active')
-    }
-  })
+$(window).resize(function() {
+  $hamburger.removeClass('header__btn-hamburger--active')
 
-  $('.header__bars').on('click', function(e) {
-    e.preventDefault()
-    $(this).toggleClass('active')
-    $headerNav.slideToggle()
-  })
+  $categoryNav.removeClass('header__category-nav--show')
+})
 
-  $(window).resize(function() {
-    if ($(this).width() > 768 && $headerNav.is(':hidden')) {
-      $headerNav.css({
-        display: ''
-      })
-    }
-  })
+$search.click(function(e) {
+  e.preventDefault()
+
+  $(this).addClass('header__search--active')
+})
+
+$(document).click(function(e) {
+  if (
+    $search.hasClass('header__search--active') &&
+    !$(e.target).is('.header__search-input, .header__btn-search *')
+  ) {
+    $search.removeClass('header__search--active')
+  }
 })

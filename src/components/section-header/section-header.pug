@@ -1,7 +1,6 @@
 mixin section-header(data, mixes)
-  .container.max-width-960px.section-header(class=(mixes) ? `${mixes}__section-header` : '')
-      .row
-        .col
-          h4.section-header__title!= data.title
-          p.section-header__desc!= data.desc
+  .section-header(class=(mixes) ? `${mixes}__section-header` : '')
+    h4.section-header__title!= data.title
+    p.section-header__desc!= data.desc
+
            

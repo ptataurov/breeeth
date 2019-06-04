@@ -1,12 +1,20 @@
 mixin breadcrumbs(mixes)
+
+  -
+    var items = [
+      {
+        label: 'Главная',
+        href: '#'
+      },
+      {
+        label: 'Продукция',
+        href: '#'
+      }
+    ]
   div(class=`breadcrumbs` + ((mixes) ? ` ${mixes}__breadcrumbs` : ''))
-    ul
-      li
-        a(href='#') Главная
-        svg(width='11' height='7' viewbox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg')
-          path(d='M6.5 0.5L9.5 3.5M9.5 3.5L6.5 6.5M9.5 3.5H0' stroke='#E7E7E7')
-      li
-        a(href='#') Продукция
-        svg(width='11' height='7' viewbox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg')
-          path(d='M6.5 0.5L9.5 3.5M9.5 3.5L6.5 6.5M9.5 3.5H0' stroke='#E7E7E7')
+    ul.breadcrumbs__list
+      each item in items
+        li.breadcrumbs__list-item
+          a.breadcrumbs__link(href=`${item.link}`)= item.label
+          include ./img/arrow.svg
       li Очистители воздуха для дома

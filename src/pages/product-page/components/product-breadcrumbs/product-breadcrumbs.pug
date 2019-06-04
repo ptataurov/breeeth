@@ -1,0 +1,7 @@
+
+mixin product-breadcrumbs
+  include ~@/components/breadcrumbs/breadcrumbs
+
+  .product-breadcrumbs
+      +breadcrumbs
+      img.product-breadcrumbs__logo-brand(src=require('./img/brand-logo.png') alt='Логотип бренда')

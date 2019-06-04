@@ -1,0 +1,20 @@
+extends ../layout
+
+include ~@/components/header/header
+include ~@/components/banner-slider/banner-slider
+include ~@/components/breadcrumbs/breadcrumbs
+include ~@/components/footer/footer
+
+block content
+
+  +header
+
+  .category-page
+    .category-page__breadcrumbs
+      +breadcrumbs
+    
+    h1.category-page__title Очистители воздуха для дома
+
+    +banner-slider
+
+  +footer

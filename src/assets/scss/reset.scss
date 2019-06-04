@@ -25,8 +25,14 @@ body {
   font-family: 'Exo 2', sans-serif;
 }
 
+input {
+  border: none;
+}
+
 button {
   font-weight: inherit;
+  background: none;
+  border: none;
 
   &:focus {
     outline: none;

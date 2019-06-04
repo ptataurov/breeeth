@@ -2,7 +2,7 @@
 
 .press-section {
   margin-bottom: 100px;
-  padding: 0 20px;
+  @include content-width;
 }
 
 .press-section__banner-block {
@@ -15,14 +15,27 @@
   }
 }
 
-.press-section__reviews-block {
+.press-section__reviews-container {
+  display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @include mq-less-md {
+    flex-direction: column;
+  }
 }
 
 .press-section__review {
   position: relative;
-  min-width: 306px;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include mq-less-md {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .press-section__review-link {
@@ -36,28 +49,56 @@
 .press-section__review-title {
   position: absolute;
   right: 45px;
-  bottom: 28px;
+  bottom: 30px;
   left: 45px;
   display: flex;
   align-items: flex-end;
   color: #fff;
   font-size: 15px;
   text-decoration: underline;
+
+  @include mq-less-lg {
+    right: 25px;
+    bottom: 20px;
+    left: 25px;
+  }
+
+  @include mq-less-md {
+    right: 45px;
+    bottom: 30px;
+    left: 45px;
+  }
 }
 
-.press-section__platforms-block {
-  justify-content: space-around;
+.press-section__platforms-container {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq-less-md {
+    flex-direction: column;
+  }
 }
 
 .press-section__platform {
   display: flex;
+  flex: 1;
   justify-content: center;
   max-width: 225px;
   min-height: 120px;
   text-align: center;
   background-color: #f7f7f7;
 
-  @include mq-less-sm {
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @include mq-less-md {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include mq-less-md {
     max-width: none;
   }
 }

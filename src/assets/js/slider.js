@@ -1,6 +1,6 @@
 const $ = require('jquery')
 
-const slider = el => {
+const slider = (el, isDouble) => {
   const $container = $(el)
   const $list = $('[data-container]', $container)
   const $items = $('[data-items]', $container)
@@ -9,7 +9,7 @@ const slider = el => {
 
   let translateWidth = 0
   let countLeft = 0
-  let defaultCountRight = ($items.length - 2) / 2
+  let defaultCountRight = isDouble ? ($items.length - 2) / 2 : $items.length - 1
 
   let countRight = defaultCountRight
   let itemWidth = $items.width()

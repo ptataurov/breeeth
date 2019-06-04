@@ -7,9 +7,26 @@
 }
 
 .eff-section__advantage {
+  display: flex;
+  justify-content: space-around;
+  max-width: 630px;
+  margin: 0 auto;
+
+  @include mq-less-md {
+    flex-direction: column;
+  }
+}
+
+.eff-section__advantage-item {
   color: #333;
   font-weight: 100;
   font-size: 30px;
+
+  @include mq-less-md {
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .eff-section__advantage-num {
@@ -44,12 +61,34 @@
   }
 }
 
+.eff-section__cards-container {
+  @include content-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .eff-section__card {
-  height: 100%;
+  flex-basis: 50%;
+  max-width: 465px;
   padding: 40px 30px;
   text-align: center;
   background-color: #f7f7f7;
+
+  &:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+
+  @include mq-less-lg {
+    flex-basis: 100%;
+    max-width: none;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
+
 .eff-section__card-title {
   margin-bottom: 38px;
   color: #a3b3dd;
@@ -119,4 +158,14 @@
   span {
     color: #f47a20;
   }
+}
+
+// mixes
+
+.eff-section__section-header {
+  margin-bottom: 40px;
+}
+
+.eff-section__video-block {
+  @include content-width;
 }

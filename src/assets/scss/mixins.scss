@@ -36,3 +36,30 @@ $xl: 1199.98px;
     @content;
   }
 }
+
+@mixin container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 1169.98px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@mixin content-width {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 979.98px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@mixin img-resp {
+  width: 100%;
+  height: auto;
+}

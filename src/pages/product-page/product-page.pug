@@ -1,7 +1,7 @@
 extends ../layout
 
 include ../../components/header/header
-include ../../components/breadcrumbs/breadcrumbs
+include ./components/product-breadcrumbs/product-breadcrumbs
 include ./components/product-head/product-head
 include ../../components/section-header/section-header
 include ./components/eff-section/eff-section
@@ -15,133 +15,14 @@ include ./components/docs-product/docs-product
 include ../../components/footer/footer
 
 block content
-  - 
-    var headerLinks = {
-      menu: [
-        {
-          href: '#',
-          title: 'О компании'
-        },
-        {
-          href: '#',
-          title: 'Доставка'
-        },
-        {
-          href: '#',
-          title: 'Оплата'
-        },
-        {
-          href: '#',
-          title: 'Возврат'
-        },
-        {
-          href: '#',
-          title: 'Контакты'
-        }
-      ],
-      category: [
-        {
-          href: '#',
-          title: 'Очистители'
-        },
-        {
-          href: '#',
-          title: 'Увлажнители'
-        },
-        {
-          href: '#',
-          title: 'Системы вентиляции'
-        },
-        {
-          href: '#',
-          title: 'Осушители'
-        },
-        {
-          href: '#',
-          title: 'Датчики'
-        }
-      ]
-    }
-
-  -
-    var footerLinks = {
-      menu: [
-        {
-          href: '#',
-          title: 'Контакты'
-        },
-        {
-          href: '#',
-          title: 'Возврат'
-        },
-        {
-          href: '#',
-          title: 'Оплата'
-        },
-        {
-          href: '#',
-          title: 'Доставка'
-        },
-        {
-          href: '#',
-          title: 'О компании'
-        }
-      ],
-      contacts: [
-        {
-          href: 'tel:84992884012',
-          phone: '8 499 288-40-12',
-          label: 'Бесплатно по РФ'
-        },
-        {
-          href: 'tel:84955454675',
-          phone: '8 495 545-46-75',
-          label: 'Офис в Москве'
-        },
-        {
-          href: 'tel:88123631665',
-          phone: '8 812 363-16-65',
-          label: 'Офис в Санкт-Петербурге'
-        }
-      ]
-    }
-
-  -
-    var productNavLinks = [
-      {
-        href: '#eff-section',
-        title: 'Эффективность'
-      },
-      {
-        href: '#press-section',
-        title: 'Обзоры'
-      },
-      {
-        href: '#trial-section',
-        title: 'Клинические исследования'
-      },
-      {
-        href: '#product-reviews',
-        title: 'Отзывы'
-      },
-      {
-        href: '#related-products',
-        title: 'Фильтры и аксессуары'
-      },
-      {
-        href: '#docs-product',
-        title: 'Техническая информация'
-      }
-    ]
     
-  +header(headerLinks)
+  +header
 
   .product-page
-    .container.d-flex.justify-content-between.align-items-center.product-page__breadcrumbs
-      +breadcrumbs
-      img.product-page__logo-brand(src=require('./img/brand-logo.png') alt='Логотип бренда')
+  
+    +product-breadcrumbs
 
-    +product-head(productNavLinks)
+    +product-head
 
     +eff-section
 
@@ -159,4 +40,4 @@ block content
 
     +docs-product
     
-  +footer(footerLinks)
+  +footer

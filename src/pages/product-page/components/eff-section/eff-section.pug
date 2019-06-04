@@ -1,7 +1,7 @@
 mixin eff-section
+
   include ~@/components/section-header/section-header
   include ~@/components/video-block/video-block
-
 
   section#eff-section.eff-section
     -
@@ -11,34 +11,31 @@ mixin eff-section
         desc: `Эффективность IQAir – это не теоретическая эффективность стандарта фильтров, а эффективность всего очистителя воздуха`
       }
 
-    +section-header(title1)
+    +section-header(title1, 'eff-section')
 
-    .container
-      .row.justify-content-center
-        .col-12.col-lg-3.mb-5.mb-lg-0
-          .eff-section__advantage
-            | более
-            p.eff-section__advantage-num 99,97%
-            p.eff-section__advantage-text
-              | частиц размером
-              br
-              span.eff-section__advantage-text--bg 
-                | от 0,3 микрометров
-              br
-              | задерживает IQAir HealPro 250
-        .col-12.col-lg-3
-          .eff-section__advantage
-            | более
-            p.eff-section__advantage-num 99,5%
-            p.eff-section__advantage-text
-              | частиц размером
-              br
-              span.eff-section__advantage-text--bg
-                | от 0,003 микрометров
-              br
-              | задерживает IQAir HealPro 250
+    .eff-section__advantage
+      .eff-section__advantage-item
+        | более
+        p.eff-section__advantage-num 99,97%
+        p.eff-section__advantage-text
+          | частиц размером
+          br
+          span.eff-section__advantage-text--bg 
+            | от 0,3 микрометров
+          br
+          | задерживает IQAir HealPro 250
+      .eff-section__advantage-item
+        | более
+        p.eff-section__advantage-num 99,5%
+        p.eff-section__advantage-text
+          | частиц размером
+          br
+          span.eff-section__advantage-text--bg
+            | от 0,003 микрометров
+          br
+          | задерживает IQAir HealPro 250
     
-    +video-block({ poster: 'https://www.breeethretail.ru/iqair_250/img/section-2-img.jpg', src: 'https://www.breeethretail.ru/iqair_250/img/video1.mp4'})
+    +video-block({ poster: 'https://www.breeethretail.ru/iqair_250/img/section-2-img.jpg', src: 'https://www.breeethretail.ru/iqair_250/img/video1.mp4'}, 'eff-section')
 
     -
       var title2 = {
@@ -47,94 +44,89 @@ mixin eff-section
         desc: `В IQAir HealthPro 250 очистка воздуха происходит в три этапа: предварительный фильтр защищает от крупной пыли, газовый фильтр — от газов и запахов, фильтр HyperHEPA – задерживает все известные аллергены, вирусы и бактерии, находящиеся в воздухе`
       }
 
-    +section-header(title2)
+    +section-header(title2, 'eff-section')
 
-    .container.max-width-960px
-      .row.justify-content-center
-        .col-12.col-lg-6.mb-30px
-          .eff-section__card
-            h6.eff-section__card-title
-              | Предварительный фильтр
-              br
-              | PreMax™ Filter F8 (S)
-            .eff-section__card-img-container
-              img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
-            p.eff-section__card-desc
-              | Задержка крупных и мелких частиц, защита последующих фильтров. Нетканное стеклянное микроволокно, плиссированное для повышения емкости
-            ul.eff-section__card-list
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char F8
-                p.eff-section__card-list-item-label Класс эффективности (≥ 99,97% для частиц ≥ 0,3 мкм)
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 2,8 м²
-                p.eff-section__card-list-item-label Площадь поверхности
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 16–21 месяц
-                p.eff-section__card-list-item-label Средний срок службы с FP40
-        .col-12.col-lg-6.mb-30px
-          .eff-section__card
-            h6.eff-section__card-title
-              | Фильтр газа и запахов
-              br
-              | V5-Cell™ Filter MG
-            .eff-section__card-img-container
-              img.eff-section__card-img(src=require('./components/eff-section/img/filter-2.png') alt='Фото фильтра')
-            p.eff-section__card-desc
-              | Контроль широкого спектра химических примесей и запахов. Multigas™ гранулированный активированный уголь и пропитанный активированный оксид алюминия (AC/4 + IA/4)
-            ul.eff-section__card-list
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 2,5 кг
-                p.eff-section__card-list-item-label Вес адсорбента
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 21 месяц
-                p.eff-section__card-list-item-label Средний срок службы с FP40
-        .col-12.col-lg-6.mb-30px
-          .eff-section__card
-            h6.eff-section__card-title
-              | Фильтр тонкой очистки
-              br
-              | HyperHEPA® Filter H12/13 (L)
-            .eff-section__card-img-container
-              img.eff-section__card-img(src=require('./components/eff-section/img/filter-3.png') alt='Фото фильтра')
-            p.eff-section__card-desc
-              | Задержка мелких и ультрамелких частиц. Нетканное стеклянное микроволокно
-            ul.eff-section__card-list
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char H12/13
-                p.eff-section__card-list-item-label Класс эффективности (≥ 99,97% для частиц ≥ 0,3 мкм)
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 5,0 м²
-                p.eff-section__card-list-item-label Площадь поверхности
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 44,5–59 месяцев
-                p.eff-section__card-list-item-label Средний срок службы с FP40
-        .col-12.col-lg-6.mb-30px
-          .eff-section__card
-            h6.eff-section__card-title
-              | Дополнительный
-              br
-              | моющийся фильтр PF40 
-              span.eff-section__card-title-footnote *
-            .eff-section__card-img-container
-              img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
-            p.eff-section__card-desc
-              | Задержка крупных и мелких частиц. Нетканый синтетический материал
-            ul.eff-section__card-list
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 17 мм
-                p.eff-section__card-list-item-label Толщина
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 40%
-                p.eff-section__card-list-item-label Эффективность ASHRAE
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 3
-                p.eff-section__card-list-item-label Кол-во фильтрующих элементов
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char 0,1 м²
-                p.eff-section__card-list-item-label Площадь поверхности
-              li.eff-section__card-list-item
-                p.eff-section__card-list-item-char Бессрочно
-                p.eff-section__card-list-item-label Средний срок службы
-            p.eff-section__card-footnote
-              span * 
-              | опционально
+    .eff-section__cards-container
+      .eff-section__card
+        h6.eff-section__card-title
+          | Предварительный фильтр
+          br
+          | PreMax™ Filter F8 (S)
+        .eff-section__card-img-container
+          img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
+        p.eff-section__card-desc
+          | Задержка крупных и мелких частиц, защита последующих фильтров. Нетканное стеклянное микроволокно, плиссированное для повышения емкости
+        ul.eff-section__card-list
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char F8
+            p.eff-section__card-list-item-label Класс эффективности (≥ 99,97% для частиц ≥ 0,3 мкм)
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 2,8 м²
+            p.eff-section__card-list-item-label Площадь поверхности
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 16–21 месяц
+            p.eff-section__card-list-item-label Средний срок службы с FP40
+      .eff-section__card
+        h6.eff-section__card-title
+          | Фильтр газа и запахов
+          br
+          | V5-Cell™ Filter MG
+        .eff-section__card-img-container
+          img.eff-section__card-img(src=require('./components/eff-section/img/filter-2.png') alt='Фото фильтра')
+        p.eff-section__card-desc
+          | Контроль широкого спектра химических примесей и запахов. Multigas™ гранулированный активированный уголь и пропитанный активированный оксид алюминия (AC/4 + IA/4)
+        ul.eff-section__card-list
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 2,5 кг
+            p.eff-section__card-list-item-label Вес адсорбента
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 21 месяц
+            p.eff-section__card-list-item-label Средний срок службы с FP40
+      .eff-section__card
+        h6.eff-section__card-title
+          | Фильтр тонкой очистки
+          br
+          | HyperHEPA® Filter H12/13 (L)
+        .eff-section__card-img-container
+          img.eff-section__card-img(src=require('./components/eff-section/img/filter-3.png') alt='Фото фильтра')
+        p.eff-section__card-desc
+          | Задержка мелких и ультрамелких частиц. Нетканное стеклянное микроволокно
+        ul.eff-section__card-list
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char H12/13
+            p.eff-section__card-list-item-label Класс эффективности (≥ 99,97% для частиц ≥ 0,3 мкм)
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 5,0 м²
+            p.eff-section__card-list-item-label Площадь поверхности
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 44,5–59 месяцев
+            p.eff-section__card-list-item-label Средний срок службы с FP40
+      .eff-section__card
+        h6.eff-section__card-title
+          | Дополнительный
+          br
+          | моющийся фильтр PF40 
+          span.eff-section__card-title-footnote *
+        .eff-section__card-img-container
+          img.eff-section__card-img(src=require('./components/eff-section/img/filter-1.png') alt='Фото фильтра')
+        p.eff-section__card-desc
+          | Задержка крупных и мелких частиц. Нетканый синтетический материал
+        ul.eff-section__card-list
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 17 мм
+            p.eff-section__card-list-item-label Толщина
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 40%
+            p.eff-section__card-list-item-label Эффективность ASHRAE
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 3
+            p.eff-section__card-list-item-label Кол-во фильтрующих элементов
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char 0,1 м²
+            p.eff-section__card-list-item-label Площадь поверхности
+          li.eff-section__card-list-item
+            p.eff-section__card-list-item-char Бессрочно
+            p.eff-section__card-list-item-label Средний срок службы
+        p.eff-section__card-footnote
+          span * 
+          | опционально

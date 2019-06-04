@@ -1,6 +1,5 @@
-mixin video-block(data)  
-  .container.video-block.max-width-960px
-    .row
-      .video-block__content
-        video(controls='controls' poster=`${data.poster}`)
-          source(src=`${data.src}`)
+mixin video-block(data, mixes)  
+  .video-block(class=(mixes) ? `${mixes}__video-block` : '')
+    .video-block__content
+      video(controls='controls' poster=`${data.poster}`)
+        source(src=`${data.src}`)

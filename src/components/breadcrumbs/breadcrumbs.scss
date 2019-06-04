@@ -1,21 +1,24 @@
 .breadcrumbs {
   font-size: 13px;
   line-height: 1.23;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  a {
-    color: #7d828f;
-    &:hover {
-      color: #f47a20;
-      & + svg path {
-        stroke: #a3b3dd;
-      }
-    }
-  }
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+
   svg {
-    margin-right: 9px;
-    margin-left: 11px;
+    margin: 0 8px;
+  }
+}
+
+.breadcrumbs__link {
+  color: #7d828f;
+
+  &:hover {
+    color: #f47a20;
+    & + svg path {
+      stroke: #a3b3dd;
+    }
   }
 }

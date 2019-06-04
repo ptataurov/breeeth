@@ -1,6 +1,6 @@
 @import '~@/assets/scss/common';
 @import '~@/components/header/header';
-@import '~@/components/breadcrumbs/breadcrumbs';
+@import './components/product-breadcrumbs/product-breadcrumbs';
 @import './components/product-head/product-head';
 @import '~@/components/section-header/section-header';
 @import './components/eff-section/eff-section';
@@ -12,15 +12,3 @@
 @import './components/product-promo/product-promo';
 @import './components/docs-product/docs-product';
 @import '~@/components/footer/footer';
-
-.product-page {
-  &__logo-brand {
-    margin-left: 20px;
-  }
-}
-
-// mixes
-
-.product-page__breadcrumbs {
-  padding: 20px 15px;
-}

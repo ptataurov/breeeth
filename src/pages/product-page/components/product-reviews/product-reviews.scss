@@ -66,7 +66,7 @@
 }
 
 .product-reviews__container-list {
-  transition: all 500ms ease-out;
+  transition: all 300ms ease-in;
 }
 
 .product-reviews__container-list-item {
@@ -79,7 +79,6 @@
   display: flex;
   justify-content: space-between;
   max-width: 1140px;
-  transition: all 500ms ease-out;
 }
 
 .product-reviews__card-list-item {

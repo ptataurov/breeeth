@@ -1,3 +1,7 @@
+.section-header {
+  @include content-width;
+}
+
 .section-header__title {
   margin-bottom: 20px;
   color: #333;
@@ -9,7 +13,7 @@
 
 .section-header__desc {
   max-width: 760px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.4;

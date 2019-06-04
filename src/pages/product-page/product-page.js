@@ -1,6 +1,6 @@
 import './product-page.scss'
 import '../../components/header/header'
-import '../../components/breadcrumbs/breadcrumbs'
+import './components/product-breadcrumbs/product-breadcrumbs'
 import './components/product-head/product-head'
 import './components/eff-section/eff-section'
 import './components/press-section/press-section'
