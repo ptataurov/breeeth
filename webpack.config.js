@@ -110,7 +110,7 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].[ext]'
+              name: 'img/[hash].[ext]'
             }
           },
           {
@@ -145,7 +145,7 @@ const config = {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-          pretty: isDev
+          pretty: true
         }
       }
     ]

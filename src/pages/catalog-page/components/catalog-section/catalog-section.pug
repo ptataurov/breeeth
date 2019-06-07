@@ -1,0 +1,107 @@
+mixin catalog-section
+  -
+    var items = [
+      {
+        title: 'IQAir Atem Desk настольный очиститель воздуха',
+        char: [67, 2],
+        oldPrice: false,
+        price: '34 990',
+        sale: false,
+        lead: false,
+        img: require('./components/catalog-section/img/catalog-item-1.png')
+      },
+      {
+        title: 'Очиститель воздуха IQAir Allergen 100',
+        char: [67, 2],
+        oldPrice: '109 990',
+        price: '99 990',
+        sale: false,
+        lead: true,
+        img: require('./components/catalog-section/img/catalog-item-2.png')
+      },
+      {
+        title: 'Очиститель воздуха IQAir GCX Multigas™',
+        char: [67, 2],
+        oldPrice: '89 990',
+        price: '84 990',
+        sale: true,
+        lead: false,
+        img: require('./components/catalog-section/img/catalog-item-3.png')
+      },
+      {
+        title: 'Очиститель воздуха IQAir GCX Multigas™',
+        char: [67, 2],
+        oldPrice: '89 990',
+        price: '84 990',
+        sale: true,
+        lead: false,
+        img: require('./components/catalog-section/img/catalog-item-3.png')
+      },
+      {
+        title: 'Очиститель воздуха IQAir GCX Multigas™',
+        char: [67, 2],
+        oldPrice: '89 990',
+        price: '84 990',
+        sale: true,
+        lead: false,
+        img: require('./components/catalog-section/img/catalog-item-3.png')
+      },
+      {
+        title: 'Очиститель воздуха IQAir GCX Multigas™',
+        char: [67, 2],
+        oldPrice: '89 990',
+        price: '84 990',
+        sale: true,
+        lead: false,
+        img: require('./components/catalog-section/img/catalog-item-3.png')
+      }
+    ]
+
+  section.catalog-section
+    ul.catalog-section__cards-list
+      each item, idx in items
+        if idx === 3
+          li.catalog-section__banner
+            h6.catalog-section__banner__title История IQAir
+            include ./img/icon-play.svg
+            img.catalog-section__banner-img(src=require('./components/catalog-section/img/catalog-section-banner.png') alt='Баннер')
+
+        else
+          li.catalog-section__cards-list-item
+            img.catalog-section__card-img(src=`${item.img}` alt='Изображение товара')
+            .catalog-section__card-content
+              if item.lead || item.sale
+                .catalog-section__card-sticker(class=(item.lead) ? 'catalog-section__card-sticker--lead' : 'catalog-section__card-sticker--sale')= (item.lead) ? 'Лидер продаж' : '%'
+              h6.catalog-section__card-title= item.title
+              ul.catalog-section__card-char-list
+                li.catalog-section__card-char-list-item
+                  p до #{item.char[0]} м³/ч
+                    span производительность
+                li.catalog-section__card-char-list-item
+                  p до #{item.char[1]} м²
+                    span обслуживаемая площадь
+              .catalog-section__card-footer
+                .catalog-section__card-price-block
+                  if item.oldPrice
+                    p.catalog-section__card-oldprice #{item.oldPrice} руб.
+                  p.catalog-section__card-price #{item.price} руб.
+                button.catalog-section__card-btn(type='button') Добавить в корзину
+    .catalog-section__pagination
+      -
+        var pages = [1, 2, 3, '...', 5]
+
+      a.catalog-section__btn-prev(href='#')
+        include ./img/arrow.svg
+  
+      ul.catalog-section__pagination-list
+        each page, idx in pages
+          li.catalog-section__pagination-list-item(class=(idx === 1) && 'catalog-section__pagination-list-item--active')
+            a.catalog-section__pagination-link(href='#')= page
+      a.catalog-section__btn-next(href='#')
+        include ./img/arrow.svg
+    .catalog-section__modal
+      button.catalog-section__modal-btn-close(type='button')
+        include ./img/icon-close.svg
+      .catalog-section__video-container
+        .catalog-section__modal-video
+          iframe(src='https://www.youtube.com/embed/NJIcw-ud5wQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)

@@ -1,0 +1,19 @@
+mixin reviews-slider(reviews)
+  .reviews-slider
+    .reviews-slider__wrap
+      ul.reviews-slider__list
+        each review in reviews
+          li.reviews-slider__list-item-wrap
+            .reviews-slider__list-item
+              .reviews-slider__body
+                ul.reviews-slider__rating
+                  each item, idx in [1, 2, 3, 4, 5]
+                    li.reviews-slider__rating-star(class=(idx != 4) ? 'reviews-slider__rating-star--active' : '')
+                      img(src=require('./components/reviews-slider/img/star.svg'))
+                p.reviews-slider__review-text= review.text
+                button.reviews-slider__toggle-btn 
+                  span.reviews-slider__toggle-btn-text.reviews-slider__review-text--active Показать весь отзыв
+                  span.reviews-slider__toggle-btn-text(style='display: none;') Скрыть весь отзыв
+              .reviews-slider__info
+                p.reviews-slider__name= review.name
+                p.reviews-slider__date-city #{review.date}, #{review.city}

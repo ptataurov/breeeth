@@ -4,13 +4,15 @@
 @import '~@/components/footer/footer';
 @import '~@/components/breadcrumbs/breadcrumbs';
 @import '~@/components/banner-slider/banner-slider';
+@import './components/catalog-section/catalog-section';
+@import './components/catalog-filter/catalog-filter';
 
-.category-page__breadcrumbs {
+.catalog-page__breadcrumbs {
   @include container;
   padding: 40px 0 20px;
 }
 
-.category-page__title {
+.catalog-page__title {
   @include container;
   margin-bottom: 40px;
 }

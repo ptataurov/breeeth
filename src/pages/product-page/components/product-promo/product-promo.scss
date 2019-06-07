@@ -202,9 +202,19 @@
   background: url(./img/promo/promo7.jpg) no-repeat left center;
   background-size: cover;
 
+  &-container {
+    @include container;
+    width: 100%;
+  }
+
   &-content {
     max-width: 465px;
+    margin-left: 50%;
     color: #333;
+
+    @include mq-less-lg {
+      margin-left: 0;
+    }
   }
 
   &-title {

@@ -47,7 +47,7 @@ mixin footer
     .footer__wrap
       .footer__top
         .footer__logo
-          include ./img/logo.svg
+          img(src=require('../../components/footer/img/logo.svg'))
         nav.footer__nav
           ul.footer__nav-list
             each link in links.menu 
@@ -66,8 +66,8 @@ mixin footer
         ul.footer__social-list
           li.footer__social-lits-item
             a.footer__social-link(href='#' target='_blank')
-              include ./img/icons/insta.svg
+              img(src=require('../../components/footer/img/icons/insta.svg'))
           li.footer__social-lits-item
             a.footer__social-link(href='#' target='_blank')
-              include ./img/icons/facebook.svg
+              img(src=require('../../components/footer/img/icons/facebook.svg'))
 

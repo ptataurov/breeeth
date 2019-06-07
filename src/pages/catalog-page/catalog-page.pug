@@ -1,0 +1,51 @@
+extends ../layout
+
+include ~@/components/header/header
+include ~@/components/banner-slider/banner-slider
+include ~@/components/breadcrumbs/breadcrumbs
+include ./components/catalog-section/catalog-section
+include ./components/catalog-filter/catalog-filter
+include ~@/components/footer/footer
+
+block content
+
+  +header
+
+  .catalog-page
+    .catalog-page__breadcrumbs
+      +breadcrumbs
+    
+    h1.catalog-page__title Очистители воздуха для дома
+    
+    - 
+      var banners = [
+        {
+          text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
+          img: {
+            origin: require('../../components/banner-slider/img/banner.png'),
+            lg: require('../../components/banner-slider/img/banner-992.png')
+          }
+        },
+        {
+          text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
+          img: {
+            origin: require('../../components/banner-slider/img/banner.png'),
+            lg: require('../../components/banner-slider/img/banner-992.png')
+          }
+        },
+        {
+          text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
+          img: {
+            origin: require('../../components/banner-slider/img/banner.png'),
+            lg: require('../../components/banner-slider/img/banner-992.png')
+          }
+        }
+      ]
+      
+    +banner-slider(banners)
+
+    +catalog-filter
+
+    +catalog-section
+
+  +footer

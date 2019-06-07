@@ -1,0 +1,18 @@
+mixin goods-slider(slides)
+  .goods-slider
+    ul.goods-slider__list
+      each slide, idx in slides
+        li.goods-slider__list-item-wrap
+          .goods-slider__list-item
+            a.goods-slider__link(href=`${slide.href}`)
+              .goods-slider__img-block
+                if (slide.oldPrice)
+                  .goods-slider__sticker %
+                img.goods-slider__img(src=`${slide.img}` alt=`Фотография товара`)
+                
+              h6.goods-slider__title= slide.title
+              .goods-slider__price-block
+                if (slide.oldPrice)
+                  p.goods-slider__oldprice #{slide.oldPrice} руб.
+                p.goods-slider__price #{slide.price} руб.
+        

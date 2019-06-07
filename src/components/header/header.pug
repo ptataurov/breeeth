@@ -47,6 +47,9 @@ mixin header
       ]
     }
 
+  include ~@/components/modal/modal
+  +modal
+
   header.header
     .header__top
       .header__top-wrap
@@ -56,23 +59,23 @@ mixin header
                 li.header__nav-list-item
                   a.header__nav-link(href=`${link.href}`)= link.title
         .header__bar
-          button.header__btn-location
-            include img/icons/location.svg
+          button.header__btn-location(rel='modal:close')
+            img(src=require('../../components/header/img/icons/location.svg'))
             | Москва
           .header__search
             form.header__search-form
               input.header__search-input(type='text' placeholder='Поиск по сайту')
               button.header__btn-search(type='submit')
-                include img/icons/search.svg
+                img(src=require('../../components/header/img/icons/search.svg'))
           a.header__auth-link(href='#')
-            include img/icons/login.svg
+            img(src=require('../../components/header/img/icons/login.svg'))
           a.header__cart-link(href='#')
-            include img/icons/cart.svg
+            img(src=require('../../components/header/img/icons/cart.svg'))
     .header__bottom
       .header__bottom-wrap
         .header__logo
           a.header__logo-link(href='/index.html')
-           include ./img/logo.svg
+           img(src=require('../../components/header/img/logo.svg'))
 
         .header__btn-hamburger
           .header__btn-hamburger-box

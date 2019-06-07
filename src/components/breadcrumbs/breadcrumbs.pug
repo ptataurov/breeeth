@@ -16,5 +16,5 @@ mixin breadcrumbs(mixes)
       each item in items
         li.breadcrumbs__list-item
           a.breadcrumbs__link(href=`${item.link}`)= item.label
-          include ./img/arrow.svg
+          img(src=require('../../components/breadcrumbs/img/arrow.svg'))
       li Очистители воздуха для дома

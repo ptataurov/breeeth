@@ -51,7 +51,7 @@
     }
 
     @include mq-less-sm {
-      margin-right: 0;
+      margin-right: 15px;
     }
   }
 }
@@ -62,6 +62,12 @@
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #fff;
+    border-bottom-color: #b2c2e4;
+  }
 }
 
 .footer__contacts-list {
@@ -111,9 +117,16 @@
   color: #fff;
   font-weight: 500;
   font-size: 22px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #fff;
+    border-bottom-color: #b2c2e4;
+  }
 }
 
 .footer__contacts-label {
+  padding-top: 3px;
   color: #fff;
   font-weight: 500;
   font-size: 13px;
@@ -149,6 +162,10 @@
 
 .footer__privacy-link {
   text-align: center;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .footer__social-list {

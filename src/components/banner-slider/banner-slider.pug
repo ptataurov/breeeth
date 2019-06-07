@@ -1,44 +1,29 @@
-mixin banner-slider
-
-  - 
-    var banners = [
-      {
-        text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
-        img: {
-          origin: require('../../components/banner-slider/img/banner.png'),
-          lg: require('../../components/banner-slider/img/banner-992.png')
-        }
-      },
-      {
-        text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
-        img: {
-          origin: require('../../components/banner-slider/img/banner.png'),
-          lg: require('../../components/banner-slider/img/banner-992.png')
-        }
-      },
-      {
-        text: 'Швейцарские очистители воздуха <br> с эффективностью свыше 99.97%',
-        img: {
-          origin: require('../../components/banner-slider/img/banner.png'),
-          lg: require('../../components/banner-slider/img/banner-992.png')
-        }
-      }
-    ]
+mixin banner-slider(slides)
 
   .banner-slider
     .banner-slider__list-wrap
       .banner-slider__btn-prev(data-btn-prev)
-        include ./img/arrow.svg
+        img(src=require('../../components/banner-slider/img/arrow.svg'))
       
       ul.banner-slider__list(data-container)
-        each banner in banners
+        each slide in slides
           li.banner-slider__list-item(data-items)
-            .banner-slider__container-content
-              p.banner-slider__content!= banner.text
-            picture
-              source(media=('(max-width: 992px)') srcset=`${banner.img.lg}`)
-              img.banner-slider__img(src=`${banner.img.origin}`)
+            if(slide.img.href)
+              a.banner-slider__link(href=`${slide.img.href}`)
+                if (slide.text)
+                  .banner-slider__container-content
+                    p.banner-slider__content!= slide.text
+                picture
+                  source(media=('(max-width: 992px)') srcset=`${slide.img.lg}`)
+                  img.banner-slider__img(src=`${slide.img.origin}`)
+            else
+              if (slide.text)
+                .banner-slider__container-content
+                  p.banner-slider__content!= slide.text
+              picture
+                source(media=('(max-width: 992px)') srcset=`${slide.img.lg}`)
+                img.banner-slider__img(src=`${slide.img.origin}`)
         
       .banner-slider__btn-next(data-btn-next)
-        include ./img/arrow.svg
+        img(src=require('../../components/banner-slider/img/arrow.svg'))
 

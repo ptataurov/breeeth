@@ -1,0 +1,201 @@
+extends ../layout
+
+include ~@/components/header/header
+include ~@/components/footer/footer
+include ~@/components/banner-slider/banner-slider
+include ./components/goods-slider/goods-slider
+include ./components/brands-slider/brands-slider
+include ./components/reviews-slider/reviews-slider
+
+block content
+  +header
+
+  .index-page
+
+    - 
+      var banners = [
+        {
+          img: {
+            origin: require('./img/banners/banner-1.jpg'),
+            lg: require('./img/banners/banner-1-992.png'),
+            href: '#'
+          }
+        },
+        {
+          img: {
+            origin: require('./img/banners/banner-2.jpg'),
+            lg: require('./img/banners/banner-2-992.png'),
+            href: '#'
+          }
+        },
+        {
+          img: {
+            origin: require('./img/banners/banner-3.jpg'),
+            lg: require('./img/banners/banner-3-992.png'),
+            href: '#'
+          }
+        }
+      ]
+
+    +banner-slider(banners)
+
+    section.index-page__sales
+      h3.index-page__subtitle Акции
+
+   
+        -
+          var slides = [
+          
+            {
+              title: 'Теплоувлажнитель ',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/2.jpg'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/3.jpg'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/4.png'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/5.png'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/6.png'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/6.png'),
+              href: '#'
+            },
+            {
+              title: 'Теплоувлажнитель на батарею Natural',
+              price: '5 990',
+              oldPrice: '7 990',
+              img: require('./img/goods/6.png'),
+              href: '#'
+            }
+          ]
+
+      +goods-slider(slides)
+    
+
+    section.index-page__new
+      h3.index-page__subtitle Новинки
+
+   
+      -
+        var slides = [
+        
+          {
+            title: 'Теплоувлажнитель ',
+            price: '5 990',
+            img: require('./img/goods/2.jpg'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/3.jpg'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/4.png'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/5.png'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/6.png'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/6.png'),
+            href: '#'
+          },
+          {
+            title: 'Теплоувлажнитель на батарею Natural',
+            price: '5 990',
+            img: require('./img/goods/6.png'),
+            href: '#'
+          }
+        ]
+
+      +goods-slider(slides)
+    
+
+    section.index-page__brands
+      h3.index-page__subtitle Бренды
+
+       -
+        var slides = [
+          require('./img/brands/1.png'),
+          require('./img/brands/2.png'),
+          require('./img/brands/3.png'),
+          require('./img/brands/4.png'),
+          require('./img/brands/2.png'),
+          require('./img/brands/1.png'),
+          require('./img/brands/4.png')
+        ]
+
+      +brands-slider(slides)
+
+
+    section.index-page__reviews
+      h3.index-page__subtitle Отзывы о нас
+
+      -
+        var reviews = [
+          {
+            text: 'Наконец-то, купила увлажнитель (Реал), который, действительно увлажняет! Испаряет 15 литров менее, чем за сутки. Быстро поднял уровень влажности в комнате 21 кв м. с 18 до 45 процентов. В комнате стало приятно находиться, появилось ощущение свежести. До этого была мойка Koenig, затем ультразвуковой. Справился с задачей только Реал. Продала дорогую мойку Koenig и заказала еще один Реал (во вторую комнату).',
+            name: 'Ольга',
+            date: '22 Января',
+            city: 'Москва'
+          },
+          {
+            text: 'Наконец-то, купила увлажнитель (Реал), который, действительно увлажняет! Испаряет 15 литров менее, чем за сутки. Быстро поднял уровень влажности в комнате 21 кв м. с 18 до 45 процентов. В комнате стало приятно находиться, появилось ощущение свежести. До этого была мойка Koenig, затем ультразвуковой. Справился с задачей только Реал. Продала дорогую мойку Koenig и заказала еще один Реал (во вторую комнату).',
+            name: 'Ольга',
+            date: '22 Января',
+            city: 'Москва'
+          },
+          {
+            text: 'Наконец-то, купила увлажнитель (Реал), который, действительно увлажняет! Испаряет 15 литров менее, чем за сутки. Быстро поднял уровень влажности в комнате 21 кв м. с 18 до 45 процентов. В комнате стало приятно находиться, появилось ощущение свежести. До этого была мойка Koenig, затем ультразвуковой. Справился с задачей только Реал. Продала дорогую мойку Koenig и заказала еще один Реал (во вторую комнату).',
+            name: 'Ольга',
+            date: '22 Января',
+            city: 'Москва'
+          }
+        ]
+
+      +reviews-slider(reviews)
+
+  +footer

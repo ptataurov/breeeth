@@ -1,0 +1,61 @@
+@import '~@/assets/scss/common';
+
+@import '~@/components/header/header';
+@import '~@/components/footer/footer';
+@import '~@/components/banner-slider/banner-slider';
+@import './components/goods-slider/goods-slider';
+@import './components/brands-slider/brands-slider';
+@import './components/reviews-slider/reviews-slider';
+
+.index-page {
+}
+
+.index-page__sales {
+  position: relative;
+  margin-bottom: 70px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: #f7f7f7;
+
+  &:before,
+  &:after {
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 1;
+    opacity: 0;
+    content: '%';
+  }
+
+  &:before {
+    top: 0;
+    left: 23%;
+    transform: translateY(-50%);
+  }
+
+  &:after {
+    right: 23%;
+    bottom: 0;
+    transform: translateY(25%);
+  }
+}
+
+.index-page__subtitle {
+  @include container;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.index-page__new {
+  margin-bottom: 90px;
+}
+
+.index-page__brands {
+  margin-bottom: 70px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: #f7f7f7;
+}

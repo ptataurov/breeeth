@@ -1,3 +1,5 @@
+import '../modal/modal'
+
 const $ = require('jquery')
 
 const $search = $('.header__search', '.header')

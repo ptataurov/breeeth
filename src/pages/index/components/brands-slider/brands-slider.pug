@@ -1,0 +1,9 @@
+mixin brands-slider(slides)
+  .brands-slider
+   .brands-slider__wrap
+      ul.brands-slider__list
+        each slide in slides
+          li.brands-slider__list-item-wrap
+            .brands-slider__list-item
+              a.brands-slider__link(href='#')
+                img.brands-slider__img(src=`${slide}` alt=`Логотип`)

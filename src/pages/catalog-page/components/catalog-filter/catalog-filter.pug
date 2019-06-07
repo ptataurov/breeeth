@@ -1,0 +1,134 @@
+mixin catalog-filter
+  .s_catalog__filter
+    .s_catalog__filter__btn
+      .s_catalog__filter__btn__ico
+        span
+        span
+        span
+      | Подобрать очиститель воздуха
+    .s_catalog__filter__params
+      .row
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label Цена, руб.
+          .s_catalog__filter__slider.slider-range(data-min='0' data-max='926 490' data-start='0' data-end='500000')
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label
+            | Обслуживаемая площадь, м
+            sup 2
+          .s_catalog__filter__slider.slider-range(data-min='0' data-max='700')
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label производительность очистки воздуха (CADR)
+          .s_catalog__filter__slider.slider-range(data-min='0' data-max='926 490' data-start='0' data-end='500000')
+      .row
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label
+            | Серия прибора
+            span.s_catalog__filter__info_btn.tooltip(data-tooltip-content='#s_catalog__filter__info_content-1')
+              img(src=require('./components/catalog-filter/img/info-btn.svg'))
+            div(style='display: none')
+              #s_catalog__filter__info_content-1.s_catalog__filter__info_content
+                .s_catalog__filter__info_content__title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsum doloribus assumenda officiis sapiente sunt fuga, error obcaecati dolorum consequatur vitae consectetur. Repellendus dolorum, quo, voluptatem natus rerum inventore minus!
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | HealthPro 
+              span.checkbox__cnt (4)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | CleanRoom 
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | CleanZone SL 
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Perfect 16 
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | GC 
+              span.checkbox__cnt (4)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | GCX 
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Dental 
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | CleanZone 5000 
+              span.checkbox__cnt (3)
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label
+            | Функции управления и контроля
+            span.s_catalog__filter__info_btn.tooltip(data-tooltip-content='#s_catalog__filter__info_content-2')
+              img(src=require('./components/catalog-filter/img/info-btn.svg'))
+            div(style='display: none')
+              #s_catalog__filter__info_content-2.s_catalog__filter__info_content
+                .s_catalog__filter__info_content__title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsum doloribus assumenda officiis sapiente sunt fuga, error obcaecati dolorum consequatur vitae consectetur. Repellendus dolorum, quo, voluptatem natus rerum inventore minus!
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Недельный таймер
+              span.checkbox__cnt (4)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox' checked='')
+              | Пульт ДУ
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Индикатор загрязнения фильтров
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Электронное управление
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Регулировка скорости работы
+              span.checkbox__cnt (4)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | ЖК дисплей
+              span.checkbox__cnt (3)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Блокировка кнопок (защита от детей)
+              span.checkbox__cnt (3)
+        .col-lg-4.col-md-6.col-12
+          .s_catalog__filter__label
+            | Тип очистителя воздуха
+            span.s_catalog__filter__info_btn.tooltip(data-tooltip-content='#s_catalog__filter__info_content-3')
+              img(src=require('./components/catalog-filter/img/info-btn.svg'))
+            div(style='display: none')
+              #s_catalog__filter__info_content-3.s_catalog__filter__info_content
+                .s_catalog__filter__info_content__title Title
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsum doloribus assumenda officiis sapiente sunt fuga, error obcaecati dolorum consequatur vitae consectetur. Repellendus dolorum, quo, voluptatem natus rerum inventore minus!
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Рециркуляционный
+              span.checkbox__cnt (47)
+          .checkbox
+            label.checkbox__label
+              input(type='checkbox')
+              | Канальный
+              span.checkbox__cnt (2)
