@@ -25,15 +25,13 @@
   transform: translate(-50%, -50%);
 }
 
-#city-modal .modal__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#city-modal p {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
-#city-modal p {
-  font-size: 16px;
+.modal__close {
+  cursor: pointer;
 }
 
 #city-modal img {
@@ -46,8 +44,26 @@
 
 #city-modal input {
   width: 100%;
+  margin-bottom: 10px;
   padding: 10px 5px;
   background-color: #e6eaed;
   border: 1px solid #eee;
   border-radius: 5px;
+}
+
+#city-modal .modal__links-group {
+  margin-left: 5px;
+}
+
+#city-modal .modal__link {
+  font-size: 14px;
+  text-decoration: underline;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
