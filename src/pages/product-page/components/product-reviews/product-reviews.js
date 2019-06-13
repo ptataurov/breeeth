@@ -1,3 +1,8 @@
 import slider from '../../../../assets/js/slider'
 
-slider('.product-reviews', true)
+const $ = require('jquery')
+
+$(document).ready(function() {
+  slider('.product-reviews', true)
+  console.log('ready!')
+})

@@ -1,3 +1,7 @@
 import slider from '../../../../assets/js/slider'
 
-slider('.related-products', true)
+const $ = require('jquery')
+
+$(function() {
+  slider('.related-products', true)
+})

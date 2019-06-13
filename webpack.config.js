@@ -40,13 +40,13 @@ const config = {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output: {
-            comments: false
-          }
-        }
-      }),
+      // new UglifyJsPlugin({
+      //   uglifyOptions: {
+      //     output: {
+      //       comments: false
+      //     }
+      //   }
+      // }),
       new OptimizeCSSAssetsPlugin({})
     ],
     splitChunks: {
